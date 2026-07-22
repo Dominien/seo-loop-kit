@@ -12,12 +12,40 @@ background, while you do something else.
 
 The only thing left for you is reading the PR and clicking merge.
 
+## The short version, for your vibe-coded site
+
+If Claude Code already lives in your repo, the whole setup is three moves:
+
+**1. Drop it in.** From the root of your repo:
+
+```bash
+curl -sL https://raw.githubusercontent.com/marcopatzelt/seo-loop-kit/main/install.sh | bash
+```
+
+**2. Add this to your main md file** (`CLAUDE.md` — the installer appends it for you, paste it
+yourself if you skipped the script):
+
+```
+SEO runs through seo-loop-kit. Read seo/SEO-LOOP.md before doing anything SEO-related.
+```
+
+**3. Tell Claude:**
+
+> *based on the seo-loop-kit setup, set up a Claude routine that runs every 21 days, then report
+> the results to me on Slack* — or email, or wherever you want the report.
+
+Done. Claude wires the schedule from `seo/routine.md`, the loop runs in the background, and you get
+a message when there is a PR worth reading.
+
+The only part it cannot do without you: the one-time keys and the Google login. That is the
+[Install](#install) section below, and it takes five minutes.
+
 ## Install
 
 From the root of your website's repository:
 
 ```bash
-curl -sL https://raw.githubusercontent.com/Dominien/seo-loop-kit/main/install.sh | bash
+curl -sL https://raw.githubusercontent.com/marcopatzelt/seo-loop-kit/main/install.sh | bash
 ```
 
 It drops in `seo/` and `.claude/`, and it **appends** to your `.gitignore` and `CLAUDE.md` rather

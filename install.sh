@@ -2,14 +2,14 @@
 # Install the loop into YOUR website's repo.
 #
 #   cd your-website
-#   curl -sL https://raw.githubusercontent.com/Dominien/seo-loop-kit/main/install.sh | bash
+#   curl -sL https://raw.githubusercontent.com/marcopatzelt/seo-loop-kit/main/install.sh | bash
 #
 # It drops two directories into your repo and touches nothing else. It appends to
 # your .gitignore and your CLAUDE.md rather than replacing them, because clobbering
 # someone's package.json is not a good first impression.
 set -euo pipefail
 
-REPO="Dominien/seo-loop-kit"
+REPO="marcopatzelt/seo-loop-kit"
 say() { printf '  %s\n' "$1"; }
 
 printf '\n  seo-loop-kit\n\n'
